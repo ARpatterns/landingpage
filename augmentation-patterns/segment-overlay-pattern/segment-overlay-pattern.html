@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Segment Overlay Pattern - AR Patterns</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/webpage/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<!-- Content -->
+					<section>
+						<header class="main">
+							<sub><p>Augmentation Pattern</p></sub>
+							<h1>Segment Overlay Pattern</h1>
+						</header>
+						<span class="image center"><img src="images/2.0 Segment Overlay@2x.png" alt="" /></span>
+
+						<h2>Description</h2>
+						<p>By utilizing computer vision and machine learning techniques, a segment detector can recognize and track designated landmarks and image segments. The outcomes of the image segmentation process may include:
+                            <ul>
+                                <li>point (pixel): room corner, object corner, pupil center, ...</li>
+                                <li>edge: horizon line, wall-floor edge, ...</li>
+                                <li>bounding box: depicting rectangle border of detected text, image, face, ...</li>
+                                <li>path (open path): eyebrow, body skeleton, ...</li>
+                                <li>contour (closed path): face, mouth, eye, ...</li>
+                                <li>image mask: sky, grass, hair, ...</li>
+                            </ul>
+                            In the AR view, the overlay is positioned based on the pixels relative to the segment within the 2D image, on top of the video stream.</p>
+
+
+							<h2>Augmentation</h2>
+							<ul>
+								<li>Placed: on screen at image segment</li>
+								<li>Aligned: flat on top as overlay</li>
+							</ul>
+							<!--
+						<h2>Requirements</h2>
+							<p>
+								lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+							</p>
+							
+							<h2>Use Cases</h2>
+							<ul>
+								<li>..</li>
+								<li>..</li>
+								<li>..</li>
+								<li>..</li>
+							</ul>
+							  
+							<h2>Best practices</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+							
+							<h2>Related Patterns</h2>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea com- modi consequat.</p>
+							<ul>
+								<li>..</li>
+								<li>..</li>
+								<li>..</li>
+								<li>..</li>
+							</ul>
+
+							-->
+					</section>
+
+				</div>
+			</div>
+
+			<!-- Sidebar -->
+			<div id="sidebar"></div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script>$('#sidebar').load('/webpage/sidebar.html')</script>
+
+	</body>
+</html>

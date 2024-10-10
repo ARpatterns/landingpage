@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Illustrations</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="header-img">
+		<img src="/webpage/images/Banner.png" alt="AR Patterns Logo" />
+	</div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<section>
+
+
+					<!-- Header -->
+					<header class="main">
+						<h1>Illustration Toolbox</h1>
+					</header>
+
+					<header>
+						<h2>Creating Custom Illustrations for Your Contribution</h2>
+					</header>
+
+					<span class="image main">
+						<img src="/webpage/illustrations_1.png" alt="" />
+					</span>
+					<!-- Content -->
+					<section>
+						<header class="main d">
+							<h2>Using the Miro Board to Create Illustrations</h2>
+						</header>
+						<p>
+							As you familiarise yourself with the descriptions, examples and ECA diagrams of AR Patterns,
+							you may have noticed that we have consistently used stylized line drawings to illustrate the
+							essence of an AR situation. In the spirit of open source, these artworks are based on an
+							open design system where you can use backgrounds and cut-out objects (just like stickers!)
+							to create your own illustration explaining your AR Pattern. Combine the pre-designed
+							elements to describe new and innovative AR examples and collaborate on the requirements and
+							implementation of the patterns in new applications and use cases. This guide will walk you
+							through how to use these elements to bring your AR concepts to life.
+						</p>
+
+					</section>
+
+
+
+					<section>
+						<header>
+							<h3>Choose your Method</h3>
+						</header>
+						<p>
+							The easiest way to create an AR illustration is to access our <a
+								href="https://miro.com/app/board/uXjVLV7ti88=/?share_link_id=177097345742">Miro board
+							</a>. Alongside the set
+							of existing examples, you'll find all the necessary backgrounds (a room, a street, or the
+							outdoors) and objects (such as furniture, plants, or abstract shapes) available as real,
+							detected, and augmented instances. Next, and most importantly, there's the user, represented
+							as a simple pair of footsteps. This design choice enables the creation of illustrations that
+							are independent of the hardware implementation (e.g. headset or handheld device) and allows
+							us to focus on the core idea of the AR pattern. Of course, there are exceptions, such as
+							hand pop-up menus or face filters, for which you'll find the appropriate assets. The final
+							category is more technical in nature: The orange AR anchors provide a straightforward
+							explanation of the augmentation's origin, positioning and orientation in space.
+						</p>
+						<span class="image main">
+							<img src="/webpage/illustrations_3.png" alt="" />
+						</span>
+						<p>
+							If you prefer to work in a vector drawing program (such as Sketch or Adobe Illustrator)
+							rather than on the Miro board, you'll find the same assets as SVG files in the download link
+							below. This gives you more options as you can modify the existing drawings or create new
+							components following the style guide.
+						</p>
+
+					</section>
+
+					<section>
+						<header class="main">
+							<h2>Build your own Scenarios</h2>
+						</header>
+						<h3>Scenario Elements</h3>
+						<p>
+							The Miro board contains a variety of elements that can be used to create AR scenarios.
+							These elements include some Environments (indoor / outdoor), objects such as plants and
+							tables, and perspectively correct anchors.
+							Depending on the application, you may want to choose from different different
+							representations of the same objects that fit the overall design. and interactive controls.
+						</p>
+						<img src="/webpage/illustrations_2.png" alt="" class="image main" />
+					</section>
+
+					<section>
+					<header class="main">
+						<h2>Steps to Build Your Scenario</h2>
+					</header>
+
+					<div class="step">
+						<h2>1. Access the Miro Board or Download the Assets</h2>
+						<p>To start building your own scenarios, access the Miro Board. Start with a blank 16:9 canvas, marked with the orange 'Start here' sticker.</p>
+					</div>
+				
+					<div class="step">
+						<h2>2. Choose a Backdrop</h2>
+						<p>Depending on your AR scenario, you will need a backdrop. Here are the options available:</p>
+						<ul>
+							<li><strong>The room (indoors):</strong> Ideal for positioning objects on the floor, in the air, or on the walls in a medium-small scale (0.5 to 2m). For a smaller scale, use the table asset and enlarge the elements.</li>
+							<li><strong>The park (outdoor):</strong> Suitable for larger AR objects (2 to 10m) and more pronounced depth scale. The park path can be used for waypoints.</li>
+							<li><strong>The street corner:</strong> Similar to the room but suited for geolocation. You can hide elements behind corners.</li>
+							<li><strong>A blank canvas:</strong> Use this for scenarios without spatial orientation, such as face masks or POV AR objects.</li>
+						</ul>
+					</div>
+				
+					<div class="step">
+						<h2>3. Select Your Props</h2>
+						<p>Props like chairs, tables, and plants are essential semantic cues in AR experiences. Play around with them to describe space, depth, and orientation. Use parallel projection for positioning objects.</p>
+					</div>
+				
+					<div class="step">
+						<h2>4. Describe the Detected Instance</h2>
+						<p>Every AR implementation needs a detection. Here’s how to describe it:</p>
+						<ul>
+							<li><strong>2D Hatch:</strong> Segmented from the AR hardware’s video stream.</li>
+							<li><strong>2D Edge:</strong> Detected objects like chairs.</li>
+							<li><strong>3D Corners:</strong> Detected triggers like QR codes.</li>
+							<li><strong>3D Point Cloud:</strong> Scanned and detected volumes.</li>
+							<li><strong>Combine with Border:</strong> Indicate detected and recognized objects using borders.</li>
+						</ul>
+						<p><span class="color-box green"></span> Detected instances are represented with bright green lines.</p>
+					</div>
+				
+					<div class="step">
+						<h2>5. Design Your Augmentation</h2>
+						<p>The blue layer represents the augmented instance. The most basic instance is a medium-sized cube, but it can also be a 2D popup. Be abstract yet specific to make the example universally applicable.</p>
+						<p><span class="color-box blue"></span> Augmented instances are represented in blue, with shading and some transparency.</p>
+					</div>
+				
+					<div class="step">
+						<h2>6. Include the User</h2>
+						<p>Position the user with purple footsteps to indicate their location and orientation. For augmentations involving the user's body, use POV hands and faces.</p>
+					</div>
+				
+					<div class="step">
+						<h2>7. Specify the Marker</h2>
+						<p>Markers help describe where the augmentation is anchored and oriented:</p>
+						<ul>
+							<li><strong>Origin (circle):</strong> Describes where the augmentation appears.</li>
+							<li><strong>Anchor (diamond):</strong> Usually positioned inside the origin, but can be separated.</li>
+							<li><strong>Orientation (arrow):</strong> Indicates the direction the object is facing.</li>
+						</ul>
+						<p><span class="color-box orange"></span> Markers are represented in orange.</p>
+					</div>
+				
+					<div class="step">
+						<h2>8. Enhance and Export</h2>
+						<p>Enhance your illustration without adding clutter. Keep the style consistent:</p>
+						<ul>
+							<li>Real-world objects are <span class="color-box white"></span> white with <span class="color-box gray"></span> dark gray lines.</li>
+							<li>Detected instances are bright green lines.</li>
+							<li>Augmented instances are blue with shading and transparency.</li>
+							<li>Markers are orange and should not be altered.</li>
+						</ul>
+						<p>Export your 16:9 canvas as a PNG image (1920×1080 pixels) from Miro or your vector software.</p>
+					</div>
+				</section>
+				</section>
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar"></div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="/webpage/assets/js/jquery.min.js"></script>
+	<script src="/webpage/assets/js/browser.min.js"></script>
+	<script src="/webpage/assets/js/breakpoints.min.js"></script>
+	<script src="/webpage/assets/js/util.js"></script>
+	<script src="/webpage/assets/js/main.js"></script>
+	<script>$('#sidebar').load('/webpage/sidebar.html')</script>
+
+</body>
+
+</html>

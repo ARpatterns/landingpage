@@ -1,0 +1,183 @@
+/* Sidebar */
+
+#sidebar {
+    $pad: 2em / 0.9;
+
+    @include vendor('flex-grow', '0');
+    @include vendor('flex-shrink', '0');
+    @include vendor('transition', (
+        'margin-left 0.5s ease',
+        'box-shadow 0.5s ease'
+    ));
+    background-color: _palette(bg-alt);
+    font-size: 0.9em;
+    position: relative;
+    width: _size(sidebar-width);
+
+    h2 {
+        font-size: (1.25em / 0.9);
+    }
+
+    > .inner {
+        @include padding($pad, $pad, (0, 0, $pad, 0));
+        position: relative;
+        width: _size(sidebar-width);
+
+        > * {
+            border-bottom: solid 2px _palette(border);
+            margin: 0 0 (_size(element-margin) * 1.75) 0;
+            padding: 0 0 (_size(element-margin) * 1.75) 0;
+
+            > :last-child {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        > .alt {
+            background-color: darken(_palette(bg-alt), 2);
+            border-bottom: 0;
+            margin: ($pad * -1) 0 ($pad * 2) ($pad * -1);
+            padding: $pad;
+            width: calc(100% + #{$pad * 2});
+        }
+    }
+
+    .toggle {
+        @include icon(false, solid);
+        @include vendor('transition', 'left 0.5s ease');
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        color: _palette(toggle-color);
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 7.5em;
+        line-height: 7.5em;
+        position: absolute;
+        top: 0;
+        width: 6em;
+        z-index: _misc(z-index-base + 10000);
+        left: _size(sidebar-width);
+
+        &:before {
+            content: '\f0c9';
+            font-size: 2rem;
+            height: inherit;
+            line-height: inherit;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-indent: 0;
+        }
+    }
+
+    &.inactive {
+        margin-left: (_size(sidebar-width) * -1);
+    }
+
+    // Styles for >=xlarge screens
+    @include breakpoint('>=xlarge') {
+        width: _size(sidebar-width-alt);
+
+        > .inner {
+            $pad: 1.5em / 0.9;
+            @include padding($pad, $pad, (0, 0, $pad, 0));
+            width: _size(sidebar-width-alt);
+
+            > .alt {
+                margin: ($pad * -1) 0 ($pad * 2) ($pad * -1);
+                padding: $pad;
+                width: calc(100% + #{$pad * 2});
+            }
+        }
+
+        .toggle {
+            height: 6.25em;
+            left: _size(sidebar-width-alt);
+            line-height: 6.25em;
+            width: 5em;
+
+            &:before {
+                font-size: 1.5rem;
+            }
+        }
+
+        &.inactive {
+            margin-left: (_size(sidebar-width-alt) * -1);
+        }
+    }
+
+    // Styles for <xlarge (small and medium screens)
+    @include breakpoint('<xlarge') {
+        box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        z-index: _misc(z-index-base + 100);
+
+        &.inactive {
+            box-shadow: none;
+        }
+
+        > .inner {
+            -webkit-overflow-scrolling: touch;
+            height: 100%;
+            left: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: absolute;
+            top: 0;
+
+            &:after {
+                content: '';
+                display: block;
+                height: 4em;
+                width: 100%;
+            }
+        }
+
+        .toggle {
+            color: _palette(toggle-color);
+            text-indent: 7.25em;
+            width: 7.25em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:before {
+                color: _palette(toggle-color);
+                font-size: 1.1rem;
+                z-index: 1;
+                content: '\f0c9';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:after {
+                background: transparentize(lighten(_palette(fg), 80), 0.15);
+                color: _palette(toggle-color);
+                border-radius: _size(border-radius);
+                content: '';
+                height: 3.5em;
+                position: absolute;
+                width: 5em;
+				left:50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        body.is-preload & {
+            display: none;
+        }
+    }
+}

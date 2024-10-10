@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>AR Patterns</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/webpage/assets/css/main.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.0.0/github-markdown.min.css">
+    <base href="/">
+</head>
+
+<body class="is-preload">
+
+    <!-- Header Image -->
+    <!-- Wrapper -->
+
+    <div id="header-img">
+        <img src="/webpage/images/Banner.png" alt="AR Patterns Logo" />
+    </div>
+
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <section>
+                    <header class="main">
+                        <h1>Event-Condition-Action</h1>
+                    </header>
+
+                    <h2>Introduction</h2>
+
+                    <p>AR pattern diagrams can be seen as a kind of pseudo code representation for Augmented Reality
+                        functionalities. They work as a rough documentation and help to comprehend the triggering,
+                        decision control, and execution mechanism of AR behavior.</p>
+
+                    <p>AR experiences are heavily driven by elements detected in the real world, without having control
+                        over their occurrence and timing during the creation process. The reactive behavior and dynamic
+                        scenography of AR/MR experiences are therefore modeled as event-driven reactions described as <a
+                            href="https://github.com/ARpatterns/catalog/tree/main/eca">Event-Condition-Action</a> (ECA)
+                        rules that perform an action in response to an event, provided that certain conditions are met.
+                        In the context of AR patterns, ECA rules build a generic technology-agnostic abstraction of the
+                        reactive behavior of AR software systems.</p>
+
+                    <p>Together with visual <a href="/webpage/illustrations.html">illustrations</a> of the
+                        scene, AR pattern diagrams help teams stay productive by making it easier to:</p>
+                    <ul>
+                        <li>Navigate AR scenarios without reading source code.</li>
+                        <li>Plan out new features before programming.</li>
+                        <li>Quickly onboard new team members.</li>
+                        <li>Collaborate with technical and non-technical team members.</li>
+                    </ul>
+
+                    <h2>Rule-Reaction Block</h2>
+                    <p>
+                        In order to provide a compact visualization of active Event-Condition-Action (ECA) rules we
+                        developed a diagram representation consisting of rule-reaction blocks. The first line of a
+                        rule-reaction block in such a diagram shows the active rule as an Event-Condition-Action triple.
+                        Below the rule a blockquoted line follows which depicts the changed state as reaction.
+                    </p>
+                    <img src="/webpage/images/abstractEvent.png" alt="" class="diagram-image1" /><p></p>
+                    
+
+
+
+                    <p>
+                        If no condition is defined, it evaluates to true, and the diagram shows an immediate execution
+                        arrow (&rarr;).
+                    </p>
+
+
+                    <p>
+                        To illustrate the use of the diagram, consider the following example which presents an active
+                        rule triggered by a temporal event (in 20 seconds). If no item is found in the current AR
+                        session (the condition), the action will provide a voice feedback (the reaction) using a
+                        text-to-speech system.
+                    </p>
+
+                    <img src="/webpage/images/sampleEvent.png" alt="" class="diagram-image2" /><p></p>
+
+                    <p>
+                        Several ECA rules may be loaded and installed at the same time. They are shown as sequences of
+                        rule-reaction blocks. Be aware that they are installed at the same time but may not be triggered
+                        at that time.
+                    </p>
+
+                    <img src="/webpage/images/sequence.png" alt="" class="diagram-image3" /><p></p>
+                    
+                    <p>An action may dynamically load and run new consecutive rules. These rules are displayed as
+                        indented block quotes consisting of one or several sequential rules. All rules in a block are
+                        loaded and installed in sequence, yet not (all) executed at loading time, but triggered by their
+                        corresponding event.
+                    </p>
+                    
+                    <!-- Replacing Image with Table -->
+                    <img src="/webpage/images/request.png" alt="" class="diagram-image4" /><p></p>
+
+                    <h2>How to write an ECA Diagram?</h2>
+                    <ol>
+                        <li>List the items that will augment the real world as media assets (e.g., 3D models, parametric
+                            geometries, images, audio files, text). These items should then be tagged by ECA rules.</li>
+                        <li>Enumerate potential events that may occur during the AR session and will trigger behavior
+                            and interactivity. See typical
+                            <a href="https://github.com/ARpatterns/catalog/blob/main/eca/events.md">Events in AR
+                                applications</a>.
+                        </li>
+                        <li>Arrange the enumerated items and events into Event-Condition-Action rules that will
+                            manipulate media items, run-time data, and system settings.</li>
+                        <li>Whenever possible, use the generic action identifiers listed in
+                            <a href="https://github.com/ARpatterns/catalog/blob/main/eca/actions.md">Actions in AR
+                                Applications</a>.
+                        </li>
+                        <li>Depict the reaction of the triggered action.</li>
+                        <li>Write down the rule-reaction blocks in
+                            <a href="https://www.markdownguide.org">Markdown</a> by applying the corresponding
+                            <a href="#markdown-mappings-for-ar-pattern-diagrams">styling</a>.
+                        </li>
+                        <li>Integrate and render the diagram as embedded documentation, e.g., in README files within
+                            GitHub repositories or in web-based technical documentation.</li>
+                    </ol>
+                    <div class="two-column-wrapper-small">
+                    <span class="image">
+                        <a href="https://github.com/ARpatterns/diagram">
+                            <img src="/webpage/images/diagram.png" alt=""  class="less-pronounced-image"/>
+                        </a>
+                        <p>Read more about <a href="https://github.com/ARpatterns/diagram">ECA Diagrams</a></p>
+
+                    </span>
+
+                    <span class="image">
+                        <a href="https://github.com/ARpatterns/diagram">
+                            <img src="/webpage/images/Event-Contiditon-Action.png" alt=""  class="less-pronounced-image"/>
+                        </a>
+
+                        <p>Read more about <a href="https://github.com/ARpatterns/diagram">ECA Patterns</a></p>
+                    </span>
+                    </div>
+               </section>
+            </div>
+        </div>
+        <!-- Sidebar -->
+        <div id="sidebar"></div>
+    </div>
+    <!-- Scripts -->
+    <script src="/webpage/assets/js/jquery.min.js"></script>
+    <script src="/webpage/assets/js/browser.min.js"></script>
+    <script src="/webpage/assets/js/breakpoints.min.js"></script>
+    <script src="/webpage/assets/js/util.js"></script>
+    <script src="/webpage/assets/js/main.js"></script>
+    <script>$('#sidebar').load('/webpage/sidebar.html')</script>
+</body>
+
+</html>

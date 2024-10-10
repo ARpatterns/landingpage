@@ -1,0 +1,46 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000
+	);
+
+// Duration.
+	$duration: (
+		nav:				0.5s,
+		transition:			0.2s
+	);
+
+// Size.
+	$size: (
+		border-radius:		0.375em,
+		element-height:		2.75em,
+		element-margin:		2em,
+		sidebar-width:		26em,
+		sidebar-width-alt:	24em,
+		gutter:				3em
+	);
+
+// Font.
+$font: (
+  family:            ('Roboto', 'Arial', sans-serif),             // General font for body text
+  family-heading:    ('Roboto Slab', serif),                      // Font for headings
+  family-fixed:      ('Courier New', 'Roboto Mono', monospace),   // Font for code or fixed-width text
+  weight:            400,                                         // Regular weight for general text
+  weight-bold:       700,                                         // Bold weight for emphasis
+  weight-heading:    700,                                         // Heading font weight
+  weight-heading-alt: 600,                                        // Alternate heading weight
+  kerning-heading:   0.05em                                       // Adjusted kerning for better readability in headings
+);
+
+// Palette.
+	$palette: (
+		bg:					#ffffff,
+		bg-alt:				#f5f6f7,
+		fg:					#000000,
+		fg-heading:			#330099,
+		toggle-color:		#00b289,
+		fg-bold:			#060508,
+		fg-light:			#9fa3a6,
+		border:				rgba(210,215,217,0.75),
+		border-bg:			transparentize(#e6ebed, 0.75),
+		accent:				#330099
+	);
