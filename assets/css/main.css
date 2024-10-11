@@ -2723,6 +2723,7 @@ ol {
   border-radius: 0.5em;
   border: 1px solid #330099;
   box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
 }
 
 .image p {
