@@ -146,15 +146,15 @@
 
         .toggle {
             color: _palette(toggle-color);
-            text-indent: 7.25em;
-            width: 7.25em;
+            text-indent: 6em;
+            width: 6em;
             display: flex;
             justify-content: center;
             align-items: center;
 
             &:before {
                 color: _palette(toggle-color);
-                font-size: 1.1rem;
+                font-size: 1rem;
                 z-index: 1;
                 content: '\f0c9';
                 position: absolute;
@@ -168,9 +168,9 @@
                 color: _palette(toggle-color);
                 border-radius: _size(border-radius);
                 content: '';
-                height: 3.5em;
+                height: 3.2em;
                 position: absolute;
-                width: 5em;
+                width: 4em;
 				left:50%;
                 transform: translateX(-50%);
             }

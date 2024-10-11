@@ -3112,15 +3112,15 @@ code {
   }
   #sidebar .toggle {
     color: #00b289;
-    text-indent: 7.25em;
-    width: 7.25em;
+    text-indent: 6em;
+    width: 6em;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   #sidebar .toggle:before {
     color: #00b289;
-    font-size: 1.1rem;
+    font-size: 1rem;
     z-index: 1;
     content: "\f0c9";
     position: absolute;
@@ -3133,9 +3133,9 @@ code {
     color: #00b289;
     border-radius: 0.375em;
     content: "";
-    height: 3.5em;
+    height: 3.2em;
     position: absolute;
-    width: 5em;
+    width: 4em;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -3390,7 +3390,7 @@ code {
 }
 #header-img img {
   width: 100%;
-  max-width: 130em;
+  max-width: 100%;
 }
 
 .platform-icons {
