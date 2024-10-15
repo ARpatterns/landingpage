@@ -1734,7 +1734,7 @@ div.two-column-wrapper {
 }
 div.two-column-wrapper .image {
   display: block;
-  margin: 0 0 5em 0;
+  margin: 0 0 2em 0;
   width: 100%;
 }
 @media screen and (min-width: 737px) {
