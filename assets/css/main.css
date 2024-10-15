@@ -158,7 +158,7 @@ em, i {
 }
 
 p {
-  margin: 0 0 2em 0;
+  margin: 0 0 0.5em 0;
   text-align: justify;
   hyphens: auto;
 }
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Gabarito", sans-serif;
   font-weight: 700;
   line-height: 1.5;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.2em 0;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: inherit;
@@ -178,7 +178,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 h1 {
   font-size: 2.3em;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.1em 0;
   line-height: 1.3;
 }
 
@@ -1769,7 +1769,7 @@ div.two-column-wrapper-small .image img {
 /* List */
 ol {
   list-style: decimal;
-  margin: 0 0 2em 0;
+  margin: 0 0 0.5em 0;
   padding-left: 1.25em;
 }
 ol li {
@@ -1778,7 +1778,7 @@ ol li {
 
 ul {
   list-style: disc;
-  margin: 0 0 2em 0;
+  margin: 0 0 0.5em 0;
   padding-left: 1em;
 }
 ul li {
