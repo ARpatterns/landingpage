@@ -21,8 +21,9 @@
 
 // Font.
 $font: (
-  family:            ('Roboto', 'Arial', sans-serif),             // General font for body text
-  family-heading:    ('Roboto Slab', serif),                      // Font for headings
+	  
+  family:            ('Gabarito', sans-serif),             // General font for body text
+  family-heading:    ('Gabarito', sans-serif),                     // Font for headings
   family-fixed:      ('Courier New', 'Roboto Mono', monospace),   // Font for code or fixed-width text
   weight:            400,                                         // Regular weight for general text
   weight-bold:       700,                                         // Bold weight for emphasis

@@ -9,15 +9,15 @@
 }
 
 .introduction {
-  font-weight: 500; /* Normalized weight for mobile */
-  font-size: 20pt; /* Desktop size */
-  line-height: 1.5; /* Consistent across all devices */
+  /*font-weight: 500; /* Normalized weight for mobile */
+  /*font-size: 20pt;  */ /*Desktop size */
+  /*line-height: 1.5; /* Consistent across all devices */
 }
 
 .introduction p,
 .introduction ul,
 .introduction li {
-  font-weight: inherit; /* Retains parent styles */
+  /*font-weight: inherit;*/ /* Retains parent styles */
 }
 
 .introduction strong {

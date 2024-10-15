@@ -1,5 +1,6 @@
 @import 'fontawesome-all.min.css';
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&display=swap");
 /*
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
@@ -109,7 +110,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after, body.is-re
 /* Type */
 body, input, select, textarea {
   color: #060508;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Gabarito", sans-serif;
   font-size: 16pt;
   font-weight: 400;
   line-height: 1.65;
@@ -164,7 +165,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #330099;
-  font-family: "Roboto Slab", serif;
+  font-family: "Gabarito", sans-serif;
   font-weight: 700;
   line-height: 1.5;
   margin: 0 0 1em 0;
@@ -1399,7 +1400,7 @@ section.special, article.special {
 }
 
 header p {
-  font-family: "Roboto Slab", serif;
+  font-family: "Gabarito", sans-serif;
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -2065,7 +2066,7 @@ button,
   color: #330099 !important;
   cursor: pointer;
   display: inline-block;
-  font-family: "Roboto Slab", serif;
+  font-family: "Gabarito", sans-serif;
   font-size: 0.8em;
   font-weight: 700;
   height: 3.5em;
@@ -2484,15 +2485,15 @@ button:disabled,
 }
 
 .introduction {
-  font-weight: 500; /* Normalized weight for mobile */
-  font-size: 20pt; /* Desktop size */
-  line-height: 1.5; /* Consistent across all devices */
+  /*font-weight: 500; /* Normalized weight for mobile */
+  /*font-size: 20pt;  */ /*Desktop size */
+  /*line-height: 1.5; /* Consistent across all devices */
 }
 
 .introduction p,
 .introduction ul,
 .introduction li {
-  font-weight: inherit; /* Retains parent styles */
+  /*font-weight: inherit;*/ /* Retains parent styles */
 }
 
 .introduction strong {
@@ -3167,7 +3168,7 @@ code {
 #header .logo {
   border-bottom: 0;
   color: inherit;
-  font-family: "Roboto Slab", serif;
+  font-family: "Gabarito", sans-serif;
   font-size: 1.125em;
 }
 #header .icons {
@@ -3301,7 +3302,7 @@ code {
   -ms-user-select: none;
   user-select: none;
   color: #060508;
-  font-family: "Roboto Slab", serif;
+  font-family: "Gabarito", sans-serif;
   font-weight: 600;
   letter-spacing: 0.05em;
   list-style: none;
