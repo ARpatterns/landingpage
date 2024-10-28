@@ -1,84 +1,147 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Tag-Along Pattern - AR Patterns</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+<head>
+	<title>Tag-Along Pattern - AR Patterns</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+</head>
 
-			<!-- Main -->
-			<div id="main">
-				<div class="inner">
+<body class="is-preload">
 
-					<!-- Content -->
-					<section>
-						<header class="main">
-							<sub><p>Augmentation Pattern</p></sub>
-							<h1>Tag-Along Pattern</h1>
-						</header>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-						<span class="image center"><img src="images/7.0 Tag Along@2x.png" alt="" /></span>                        
-						<h2>Description</h2>
-						<p>A tag-along augmentation attempts to always stay within the user’s view range, which is constrained to their eye position. To achieve this, the augmentation is typically always oriented towards the user’s face using billboarding techniques. The main advantage of tag-along augmentations is that they ensure the presented interaction elements are always visible and easily accessible to the user. In AR applications for head-mounted displays, tag-along augmentations are usually designed to fit within the user’s arm-length range, ensuring they can interact with the elements without stretching or straining themselves. An example is the ‘Near Menu’ UX component of the <a href="https://learn.microsoft.com/windows/mixed-reality/mrtk-unity/mrtk3-overview">Mixed Reality Toolkit</a>.</p>
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<sub>
+							<p>Augmentation Pattern</p>
+						</sub>
+						<h1>Tag-Along Pattern</h1>
+					</header>
 
-						<h2>Augmentation</h2>
-						<ul>
-							<li>Placed: constraint ahead of usert</li>
-							<li>Aligned: constraint towards user</li>
-						</ul>
-						<!--
-						<h2>Requirements</h2>
-						<p>
-							lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
-						</p>
-						
-						<h2>Use Cases</h2>
-						<ul>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-						</ul>
-						  
-						<h2>Best practices</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
-						
-						<h2>Related Patterns</h2>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea com- modi consequat.</p>
-						<ul>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-						</ul>					
-						
-						
-						
-						-->
+					<span class="image center"><img src="images/7.0 Tag Along@2x.png" alt="" /></span>
+					<h2>What is the Tag-Along Pattern?</h2>
+					<p>An augmentation following the Tag-Along pattern always moves together with the user (it tags
+						along). Typically, such an augmentation also always attempts to stay within the user’s view
+						range. The main advantage of tag-along augmentations is that they ensure the presented
+						interaction elements are always visible and easily accessible to the user.</p>
+					<p>A Tag-Along augmentation is typically oriented towards the user’s position, centered on the
+						user's face or device, using billboarding techniques. User interface components in AR
+						applications are a typical example of this pattern: These UI elements must stay within the
+						user's view range while also being located within the AR scene.</p>
+					<p>In AR applications for head-mounted displays, tag-along augmentations are usually designed to fit
+						within the user’s arm-length range, ensuring they can interact with the elements without
+						stretching or straining themselves.</p>
 
-					</section>
+					<h2>Requirements</h2>
+					<p>Tag-Along augmentations move with the user and are attached to the user's position within the AR
+						scene, facing the user's face or, more generally, the camera. This ensures the augmentation
+						stays within the user's view. Depending on the application, the augmentation may mirror the
+						user's movements more or less closely.</p>
+					<p>
+						We differentiate between two types of movement constraints:
+					</p>
+					<ul>
+						<li><strong>Synchronized: </strong>The augmentation always mirrors the user's look-at direction,
+							as if the user were wearing a head-mounted display. This is useful in games, such as
+							first-person shooters, where the augmentation needs to move fluidly with the user’s
+							perspective.</li>
+						<li><strong>Free: </strong>The augmentation stays in place within the scene even when the user
+							moves their head up or down (y-axis), tilts (yaw), or rotates. The user may manually
+							reposition the augmentation or simply turn back to where it was positioned. This free
+							behavior, which is independent of head movement, is helpful in applications like 3D design,
+							where the augmentation should not obstruct the user’s view but can be repositioned when
+							needed.</li>
+					</ul>
+					<p>
+						Tag-Along augmentations are not used in every scenario where something moves with the user. For
+						example, a virtual dog walking beside the user is better suited for the <a
+							href="/augmentation-patterns/ahead-staging-pattern/ahead-staging-pattern.html">Ahead Staging
+							Pattern</a>
+						and <a href="/augmentation-patterns/captured-twin-pattern/captured-twin-pattern.html">Captured
+							Twin Pattern</a>, as the virtual dog adjusts to environmental features (ground, walls,
+						etc.) and is anchored in the scene, not to the user.
+					</p>
+					<ul>
+						<li>Anchored: on user</li>
+						<li>Placed: constraint ahead of usert</li>
+						<li>Aligned: constraint towards user</li>
+						<li>Camera: rear-facing</li>
+					</ul>
+					<h2>Related Patterns</h2>
+					<ul>
+						<li><a href="/augmentation-patterns/hand-palm-pop-up-pattern/hand-palm-pop-up-pattern.html">Hand/Palm
+								Pop-Up Pattern: </a> While also primarily useful for UI components, this pattern
+							attaches elements to the user's hand instead of centering them on the user's position.</li>
+						<li><a href="/augmentation-patterns/ahead-staging-pattern/ahead-staging-pattern.html">Ahead
+								Staging Pattern: </a>In the Ahead Staging Pattern, augmentations are initially placed ahead
+								of the user, but they are world-locked and do not move with the user. See the virtual
+								dog example in the Requirements section for a more detailed explanation.</a></li>
+					</ul>
+					<h2>Technical Considerations</h2>
+					<p>
+						Designing Tag-Along augmentations presents several technical challenges because their frequent
+						use in AR, XR, and VR applications has created high expectations for usability. A Tag-Along
+						augmentation stays with the user and is not world-locked but is attached to the scene’s camera.
+						Some key considerations include:
+					</p>
+					<ul>
+						<li><strong>Scene Interactions: </strong>Typically, Tag-Along augmentations do not collide with
+							the environment or respond to scene lighting. To ensure that UI elements remain visible,
+							it’s important to treat Tag-Along augmentations separately from the rest of the AR scene by
+							always drawing them on top of other content. They should also avoid responding to scene
+							lighting to remain optimally readable. However, in entertainment apps where visual
+							consistency is key, these augmentations might break immersion, and a narrative reason may
+							need to explain their presence (e.g., attached to a helmet). In some cases, in-scene
+							lighting might be used to help them blend better into the environment.</li>
+						<li><strong>Movement Constraints: </strong> It’s essential to decide how closely the
+							augmentation mirrors the user’s movements and to what degree it is constrained. Synchronized
+							constraints, where the augmentation follows the user's look-at direction, can help in games,
+							while free constraints, where the augmentation remains stationary as the user moves, are
+							useful in design programs. UI elements typically remain upright, avoiding tilt along the x-
+							and z-axes to help the user maintain orientation. The position along the y-axis is also
+							often constrained, keeping the augmentation at a comfortable level (e.g., hip or face
+							level), even if the user bends or crouches.</li>
+						<li><strong>Presence: </strong>Users need clear feedback to understand which UI element or scene
+							they are currently interacting with. Visual cues, haptics, and sound are essential in
+							ensuring smooth interactions. For example, the concept of <a
+								href="https://ieeexplore.ieee.org/document/10108763">tomato presence</a> ensures that
+							users know which button they are pointing at before accidentally pressing it. Similarly,
+							haptics and audio feedback can assist users in navigating the interface and enhance their
+							sense of presence.</li>
+					</ul>
+					<h2>Scenarios and Examples</h2>
+					<ul>
+						<li><strong>User Interfaces: </strong>The "Near Menu" UX component of the <a href="https://learn.microsoft.com/en-gb/windows/mixed-reality/mrtk-unity/mrtk3-overview/">Mixed Reality Toolkit</a> is a good example of the Tag-Along pattern, where menus remain within the user's view and are easily accessible at all times.</li>
+						<li><strong>Gaming: </strong>In first-person shooter games, HUD elements that follow the player's movement and remain visible in their field of view use the Tag-Along pattern to ensure quick access to important game information without obstructing the player’s view of the game world.</li>
+						<li><strong>Design Applications: </strong>In 3D design apps, the Tag-Along pattern can be used for tool menus that are kept accessible but can also be moved or hidden to prevent cluttering the user’s workspace.</li>
+					</ul>
 
-				</div>
+				</section>
+
 			</div>
-
-			<!-- Sidebar -->
-			<div id="sidebar"></div>
-
 		</div>
 
-		<!-- Scripts -->
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="/assets/js/browser.min.js"></script>
-		<script src="/assets/js/breakpoints.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-		<script src="/assets/js/main.js"></script>
-		<script>$('#sidebar').load('/sidebar.html')</script>
+		<!-- Sidebar -->
+		<div id="sidebar"></div>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script>$('#sidebar').load('/sidebar.html')</script>
+
+</body>
+
 </html>

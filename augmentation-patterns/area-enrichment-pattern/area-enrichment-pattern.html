@@ -1,84 +1,120 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Area Enrichment Pattern - AR Patterns</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+<head>
+	<title>Area Enrichment Pattern - AR Patterns</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+</head>
 
-			<!-- Main -->
-			<div id="main">
-				<div class="inner">
+<body class="is-preload">
 
-					<!-- Content -->
-					<section>
-						<header class="main">
-							<sub><p>Augmentation Pattern</p></sub>
-							<h1>Area Enrichment Pattern</h1>
-						</header>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-						<span class="image center"><img src="images/3.0 Area Enrichment@2x.png" alt="" /></span>
-						<p>The Area Enrichment Pattern uses detected image segments to calculate the spatial 3D area resulting from perspective projection of the segment into depth of space. The calculated 3D area can then be used to populate the space with virtual items.</p>
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-						<h2>Augmentation</h2>
-						<ul>
-							<li>Placed: in 3D area at image segment</li>
-							<li>Aligned: to area / towards user</li>
-						</ul>
-						<!--
-						<h2>Requirements</h2>
-						<p>
-							lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
-						</p>
-						
-						<h2>Use Cases</h2>
-						<ul>
-							<li>point (pixel): room corner, object corner, pupil center, ...</li>
-							<li>edge: horizon line, wall-floor edge, ...</li>
-							<li>bounding box: depicting rectangle border of detected text, image, face, ...</li>
-							<li>path (open path): eyebrow, body skeleton, ...</li>
-							<li>contour (closed path): face, mouth, eye, ...</li>
-							<li>image mask: sky, grass, hair, ...</li>
-						</ul>
-						  
-						<h2>Best practices</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
-						
-						<h2>Related Patterns</h2>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea com- modi consequat.</p>
-						<ul>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-						</ul>						
-						
-						
-						
-						-->
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<sub>
+							<p>Augmentation Pattern</p>
+						</sub>
+						<h1>Area Enrichment Pattern</h1>
+					</header>
 
-					</section>
+					<span class="image center"><img src="images/3.0 Area Enrichment@2x.png" alt="" /></span>
+					<h2>What is the Area Enrichment Pattern?</h2>
+					<p>
+						The Area Enrichment pattern is to replace and overlay parts of the camera image with an
+						augmentation.
+					</p>
+					<p>
+						This pattern applies whenever detected parts of an image (an area) is replaced (enriched) with
+						an AR augmentation. With the Area Enrichment Pattern the intention is to spacially project 3D
+						content in to the detected area in order to create an alternate reality. However, it is less
+						common than the <a
+							href="/augmentation-patterns/segment-overlay-pattern/segment-overlay-pattern.html">Segment
+							Overlay Pattern.</a>
+					</p>
+					<p>
+						Area Enrichment is a technique which may be encountered in any context where blending reality
+						and AR augmentations are beneficial. For example, virtual backgrounds in conferencing
+						applications or reality-altering effects in photography and video applications are typical
+						applications of the area enrichment pattern.
+					</p>
+					<h2>Requirements</h2>
+					<p>
+						The area enrichment pattern requires an image segment (area) that can be augmented with AR
+						content (enrichment). The enrichment is typically aware of the segment's spacial orientation,
+						and uses it to populate the calculated space with virtual items.
+					</p>
+					<ul>
+						<li>Anchored: not applicable</li>
+						<li>Placed: on image segment</li>
+						<li>Aligned: any, but often oriented towards user</li>
+						<li>Camera: any</li>
+					</ul>
+					<h2>Related Patterns</h2>
+					<ul>
 
-				</div>
+						<li><a href="/augmentation-patterns/segment-overlay-pattern/segment-overlay-pattern.html">Segment
+								Overlay Pattern: </a>The segment overlay pattern typically applies for dynamic segments
+							such as faces, text or other image segments that are recognized with image recognition
+							techniques.</li>
+						<li><a href="/augmentation-patterns/superimposition-pattern/superimposition-pattern.html">Superimposition
+								Pattern: </a>If the purpose of the AR augmentation is to superimpose a replacement of a
+							specific object rather than creating a 3D area to populate it with virtual objects, the
+							Superimposition pattern applies.</li>
+
+						<li>
+							<a
+								href="/augmentation-patterns/anchored-supplement-pattern/anchored-supplement-pattern.html">Anchored
+								Supplement Pattern: </a>Anchored supplements differ in two aspects: They do not rely on
+							image segmentation but rather feature recognition, and they never have the intention of
+							replacing content, but rather to supplement it with additional information.
+						</li>
+
+					</ul>
+					<h2>
+						Technical Considerations
+					</h2>
+					<p>
+						The Area Enrichment Pattern uses detected image segments to calculate the spatial 3D area
+						resulting from perspective projection of the segment into depth of space. The calculated 3D area
+						can then be used to populate the space with virtual items.
+					</p>
+					<h2>Scenarios and Examples</h2>
+					<ul>
+						<li>
+							Video Conferencing: Virtual Backgrounds
+						</li>
+						<li>
+							Video or Photo Effects: Changing scene reality, and combining it with other patterns such as
+							Superimposition, Staged Progression or Ahead Staging.
+						</li>
+					</ul>
+				</section>
+
 			</div>
-
-			<!-- Sidebar -->
-			<div id="sidebar"></div>
-
 		</div>
 
-		<!-- Scripts -->
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="/assets/js/browser.min.js"></script>
-		<script src="/assets/js/breakpoints.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-		<script src="/assets/js/main.js"></script>
-		<script>$('#sidebar').load('/sidebar.html')</script>
+		<!-- Sidebar -->
+		<div id="sidebar"></div>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script>$('#sidebar').load('/sidebar.html')</script>
+
+</body>
+
 </html>

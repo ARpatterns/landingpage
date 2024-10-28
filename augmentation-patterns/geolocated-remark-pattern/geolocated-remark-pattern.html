@@ -22,42 +22,24 @@
 							<h1>Geolocated Remark Pattern</h1>
 						</header>
 						<span class="image center"><img src="images/1.1 Geolocated Remark@2x.png" alt="" /></span>
-						<h2>Description</h2>
-						<p>A geolocated remark is a rule that is triggered by GPS location data (latitude and longitude) or by address data (i.e., country, city, street, building name). Typically, the reaction to a geolocated remark is presented as text in the 2D user interface or as audio feedback. Due to the precision restrictions of GPS signals, the reaction is not precisely placed in 2D or 3D space.</p>
-
-						<h2>Augmentation</h2>
-						<ul>
-							<li>Placed: no (only as overlay) or ahead of user</li>
-							<li>Aligned: no or towards user</li>
-						</ul>
-						<!---
-						
-						<h2>Requirements</h2>
+						<h2>What is the Geolocated Remark Pattern</h2>
 						<p>
-							lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+							The <i>Geolocated Remark</i> pattern is about placing AR augmentations at locations defined by map coordinates. Most often, Geolocated Remark augmentations are used in conjunction with GPS-enabled devices, and try to enforce the correct location of the user. Examples of Geolocated Remarks are pervasive games like Pokemon Go, where monsters spawn at specific geographic locations, as well as map applications
 						</p>
-						
-						<h2>Use Cases</h2>
+						<p>Typically, the reaction to a geolocated remark is presented as text in the 2D user interface or as audio feedback.</p>
+						<h2>Requirements</h2>
 						<ul>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
+							<li>Anchored: on GPS location</li>
+							<li>Placed: on GPS location, often paired with Attention Director pattern to help users identify their own relative position.</li>
+							<li>Aligned: N/A or towards user</li>
 						</ul>
-						  
-						<h2>Best practices</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
-						
-						<h2>Related Patterns</h2>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea com- modi consequat.</p>
-						<ul>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-						</ul>
-						-->
-						
+						<h2>Technical Considerations</h2>
+						<p>
+							Due to the precision restrictions of GPS signals, the reaction is not precisely placed in 2D or 3D space.
+						</p>
+						<p> 
+							Geolocated Remarks require AR devices with GPS capabilities if enforcing the actual location of the user is important. Otherwise, simply entering an address or coordinates can and should be offered. Location spoofing is an issue with the Geolocated Remark pattern: In Pokemon Go, for example, developer Niantic has taken considerable measures to prevent or discourage location spoofing. Often however, geolocated remark patterns exist to provide better usability, for example in map or navigation applications.
+						</p>
 					</section>
 				</div>
 			</div>

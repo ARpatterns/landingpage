@@ -22,41 +22,36 @@
 							<h1>Captured Twin Pattern</h1>
 						</header>
 						<span class="image center"><img src="images/4.0 Captured Twin@2x.png" alt="" /></span>
-						<h2>Description</h2>
-						<p>A captured twin is a virtual replica of a physical element. It is created using data collected from sensors, cameras, and other sources. A captured twin can then, for example, be virtually visualized as a contour or as a transparent 3D bounding box to keep the real object recognizable. In the image <a href="https://github.com/ARpatterns/catalog/blob/main/augmentation-patterns/ahead-staging.md#alignment-of-augmentations-in-3d">Alignment of Augmentations in 3D (with object)</a>, a real-world chair has been detected as an object and is indicated with a virtual bounding box and a text label of the object type. A captured twin may also have no virtual representation but becomes available in the spatial data model (e.g., for collision detection or as a reference for spatial alignment).</p>
+						<h2>What is the Captured Twin Pattern</h2>
+						<p>A captured twin is a virtual replica (twin) of a physical entity, created using data collected (captured) from sensors, cameras, and other sources. This captured data can include geometry, surface textures, and even physical behaviors like movement. The captured twin can be visualized in various ways: as a contour, a transparent 3D bounding box (keeping the real object recognizable), or even a full 3D rendition of the object. Sometimes, the captured twin may not have a visual representation at all but is integrated into the spatial data model (e.g., for collision detection or spatial alignment).</p>
+						<p>n the example image above, the real object is represented virtually as a point cloud. In contrast, in the <a href="/augmentation-patterns/ahead-staging-pattern/ahead-staging-pattern.html">Ahead Staging Pattern</a>, a chair has been detected in the real world and marked with a virtual bounding box and a text label, but the actual captured twin itself is not shown.</p>
+						<p>The <i>Captured Twin Pattern</i> is versatile and fundamental to many AR applications. For instance, it plays a key role in occluding virtual objects behind real-world objects, rendering them invisible when necessary, or enabling collision interactions between virtual and physical objects. It's also central to 3D scanning applications, where capturing the object is the primary goal.</p>
+						<p>Thus, the main applications of the Captured Twin pattern are often auxiliary to other use cases or patterns.</p>
+						<h2>Requirements</h2>
+						<p>The Captured Twin pattern applies whenever a model of the real world is captured to be used within an AR application. The intent behind capturing the real-world entity is irrelevant to this pattern. A captured twin can serve different purposes:</p>
+						<ul>
+							<li><strong>As an augmentation:</strong> A point cloud or derived 3D model that can be used in conjunction with patterns like the Ahead Staging Pattern, the Superimposition Pattern, or other applicable patterns.</li>
+							<li><strong>As an invisible object for occlusion or collision:</strong> Invisible objects enable more realistic interactions within the AR scene, such as occlusion (blocking the view of virtual objects behind real ones) and collision detection. These interactions can improve the visual credibility of augmented elements by ensuring they behave as if they are part of the real world.</li>
+							<li>Anchored: to an object or in the world.</li>
+							<li>Placed: initially on the object.</li>
+							<li>Aligned: initially with the object.</li>
+							<li>Camera: typically rear-facing.</li>
+						</ul>
 
-						<h2>Augmentation</h2>
-						<ul>
-							<li>Placed: on object</li>
-							<li>Aligned: with object</li>
-						</ul>
-						<!--
-												<h2>Requirements</h2>
-						<p>
-							lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
-						</p>
-						
-						<h2>Use Cases</h2>
-						<ul>
-							<li>...</li>
-							<li>...</li>
-							<li>...</li>
-							<li>...</li>
-							<li>...</li>
-						</ul>		  
-						<h2>Best practices</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
-						
 						<h2>Related Patterns</h2>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea com- modi consequat.</p>
+						<li>
+							<a href="/augmentation-patterns/superimposition-pattern/superimposition-pattern.html">Superimposition Pattern</a>: If the captured twin is rendered above the real object, it can also be considered an instance of the Superimposition Pattern. However, while the Superimposition Pattern focuses on covering up a detected object or segment with virtual content, the Captured Twin pattern is primarily about capturing real-world objects to use the collected data in the AR scene.
+						</li>
+						<h2>Technical Considerations</h2>
+						<p>
+							In most applications, the Captured Twin pattern requires a high level of precision during the capturing process, especially in scenarios like industrial or medical applications. While a camera image may suffice for simple AR tasks, the use of LIDAR sensors or other sensor technologies can greatly enhance precision where accuracy is critical.
+						</p>
+						<h2>Scenarios and Examples</h2>
 						<ul>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
-							<li>..</li>
+							<li><strong>Scanning:</strong> Any AR app that captures real-world objects, such as 3D scanning applications, typically uses the Captured Twin pattern during the scanning process.</li>
+							<li><strong>Gaming:</strong> Mixed Reality (XR) games that combine virtual and real worlds can benefit from the Captured Twin pattern, using invisible twins for better occlusion and lighting effects.</li>
+							<li><strong>Mixed-Reality Headsets:</strong> In any mixed-reality application, the credibility of augmented experiences in the camera pass-through is enhanced by using captured twins to simulate realistic interactions.</li>
 						</ul>
-						
-						-->
 					</section>
 
 				</div>
