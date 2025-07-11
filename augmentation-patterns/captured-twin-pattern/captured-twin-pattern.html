@@ -4,7 +4,7 @@
 		<title>Area Enrichment Pattern - AR Patterns</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/landingpage/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -24,7 +24,7 @@
 						<span class="image center"><img src="images/4.0 Captured Twin@2x.png" alt="" /></span>
 						<h2>What is the Captured Twin Pattern</h2>
 						<p>A captured twin is a virtual replica (twin) of a physical entity, created using data collected (captured) from sensors, cameras, and other sources. This captured data can include geometry, surface textures, and even physical behaviors like movement. The captured twin can be visualized in various ways: as a contour, a transparent 3D bounding box (keeping the real object recognizable), or even a full 3D rendition of the object. Sometimes, the captured twin may not have a visual representation at all but is integrated into the spatial data model (e.g., for collision detection or spatial alignment).</p>
-						<p>n the example image above, the real object is represented virtually as a point cloud. In contrast, in the <a href="/landingpage/augmentation-patterns/ahead-staging-pattern/ahead-staging-pattern.html">Ahead Staging Pattern</a>, a chair has been detected in the real world and marked with a virtual bounding box and a text label, but the actual captured twin itself is not shown.</p>
+						<p>n the example image above, the real object is represented virtually as a point cloud. In contrast, in the <a href="/augmentation-patterns/ahead-staging-pattern/ahead-staging-pattern.html">Ahead Staging Pattern</a>, a chair has been detected in the real world and marked with a virtual bounding box and a text label, but the actual captured twin itself is not shown.</p>
 						<p>The <i>Captured Twin Pattern</i> is versatile and fundamental to many AR applications. For instance, it plays a key role in occluding virtual objects behind real-world objects, rendering them invisible when necessary, or enabling collision interactions between virtual and physical objects. It's also central to 3D scanning applications, where capturing the object is the primary goal.</p>
 						<p>Thus, the main applications of the Captured Twin pattern are often auxiliary to other use cases or patterns.</p>
 						<h2>Requirements</h2>
@@ -40,7 +40,7 @@
 
 						<h2>Related Patterns</h2>
 						<li>
-							<a href="/landingpage/augmentation-patterns/superimposition-pattern/superimposition-pattern.html">Superimposition Pattern</a>: If the captured twin is rendered above the real object, it can also be considered an instance of the Superimposition Pattern. However, while the Superimposition Pattern focuses on covering up a detected object or segment with virtual content, the Captured Twin pattern is primarily about capturing real-world objects to use the collected data in the AR scene.
+							<a href="/augmentation-patterns/superimposition-pattern/superimposition-pattern.html">Superimposition Pattern</a>: If the captured twin is rendered above the real object, it can also be considered an instance of the Superimposition Pattern. However, while the Superimposition Pattern focuses on covering up a detected object or segment with virtual content, the Captured Twin pattern is primarily about capturing real-world objects to use the collected data in the AR scene.
 						</li>
 						<h2>Technical Considerations</h2>
 						<p>
@@ -63,12 +63,12 @@
 		</div>
 
 		<!-- Scripts -->
-		<script src="/landingpage/assets/js/jquery.min.js"></script>
-		<script src="/landingpage/assets/js/browser.min.js"></script>
-		<script src="/landingpage/assets/js/breakpoints.min.js"></script>
-		<script src="/landingpage/assets/js/util.js"></script>
-		<script src="/landingpage/assets/js/main.js"></script>
-		<script>$('#sidebar').load('/landingpage/sidebar.html')</script>
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/browser.min.js"></script>
+		<script src="/assets/js/breakpoints.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<script>$('#sidebar').load('/sidebar.html')</script>
 
 	</body>
 </html>
