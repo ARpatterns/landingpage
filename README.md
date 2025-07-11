@@ -16,7 +16,7 @@ TBD
 
 CSS: 
 
-We're working with Sass, Scss. Have a look at the documentaion: 
+We are working with Sass, Scss. Have a look at the documentaion: 
 
 on macOS you can install the necessary tooling via Homebrew:
 
@@ -28,7 +28,8 @@ brew install sass/sass/sass
 Run the build script to generate the new (main.css) file
 
 ```
-sass assets/sass/main.scss assets/css/main.css
+sass public/assets/sass/main.scss public/assets/css/main.css
 ```
+Be careful with the colors: sass may create colors with decimal places, e.g.  `background-color: rgb(56.1, 0, 168.3)`. Before commiting the changes, check the color alues, and replace them with the previous hex value, e.g. `background-color: #3800a8`
 
 ## Credits
