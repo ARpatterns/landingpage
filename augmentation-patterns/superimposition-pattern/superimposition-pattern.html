@@ -5,7 +5,7 @@
 	<title>Superimposition Pattern - AR Patterns</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/landingpage/assets/css/main.css" />
 </head>
 
 <body class="is-preload">
@@ -25,7 +25,7 @@
 						</sub>
 						<h1>Superimposition Pattern</h1>
 					</header>
-					<span class="image center"><img src="images/6.0 Superimposition@2x.png" alt="" /></span>
+					<span class="image center"><img src="/landingpage/augmentation-patterns/superimposition-pattern/images/6.0 Superimposition@2x.png" alt="" /></span>
 					<h2>What is the Superimposition Pattern?</h2>
 					<p>
 						Superimposition aims to cover a detected entity with a virtual one. For example, in an augmented
@@ -68,18 +68,18 @@
 					</ul>
 					<h2>Related Patterns</h2>
 					<ul>
-						<li><a href="/augmentation-patterns/area-enrichment-pattern/area-enrichment-pattern.html">Area
+						<li><a href="/landingpage/augmentation-patterns/area-enrichment-pattern/area-enrichment-pattern.html">Area
 								Enrichment: </a> While the Superimposition Pattern replaces entities in 3D space with
 							virtual entities, the Area Enrichment pattern replaces entire areas of an image, for example
 							the background, the sky, or all green pixels, and fills them with an augmentation. However,
 							both patterns use spaciality in their augmentations.</li>
-						<li><a href="/augmentation-patterns/segment-overlay-pattern/segment-overlay-pattern.html">Segment
+						<li><a href="/landingpage/augmentation-patterns/segment-overlay-pattern/segment-overlay-pattern.html">Segment
 								Overlay: </a> The Segment Overlay patterns differs in general in that it does not take
 							into account the spacial orientation of the image segment, i.e. the part of the image that
 							is covered up by an augmentation often do not share their positioning. Face Swap filters for
 							example only work well if both faces are oriented the same way, and are a typical
 							application of the segment overlay pattern.</li>
-						<li><a href="/augmentation-patterns/ahead-staging-pattern/ahead-staging-pattern.html">Ahead
+						<li><a href="/landingpage/augmentation-patterns/ahead-staging-pattern/ahead-staging-pattern.html">Ahead
 								Staging: </a> The ahead staging pattern places augmentations in relation to world-locked
 							anchors. It does not share the Superimposition Patterns intention of covering up anything,
 							instead focusing on a user-friendly placement of augmentations in an AR scene, like placing
@@ -106,6 +106,20 @@
 						<li>Shopping apps may use this pattern for virtual-try on scenarios, where users may wish to see
 							if a piece of clothing fits them before buying.</li>
 					</ul>
+
+					<button id="try_it_out" onclick="startLens('superimposition')">Try it out</button>
+					<div class="camera-kit-container">
+						<p id="no-camera-connected-error-message"></p>
+						<span class="canvas center"><canvas id="canvas"></canvas></span>
+					
+						<p class="text-with-icon" id="snap_attribution">
+							Powered by
+							<a href="https://ar.snap.com/camera-kit">
+							  <img src="/landingpage/images/snap_logo.svg" alt="Snap Logo"/>
+							</a>
+						</p>	
+					</div>
+
 				</section>
 
 			</div>
@@ -117,12 +131,13 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="/assets/js/jquery.min.js"></script>
-	<script src="/assets/js/browser.min.js"></script>
-	<script src="/assets/js/breakpoints.min.js"></script>
-	<script src="/assets/js/util.js"></script>
-	<script src="/assets/js/main.js"></script>
-	<script>$('#sidebar').load('/sidebar.html')</script>
+	<script src="/landingpage/assets/js/jquery.min.js"></script>
+	<script src="/landingpage/assets/js/browser.min.js"></script>
+	<script src="/landingpage/assets/js/breakpoints.min.js"></script>
+	<script src="/landingpage/assets/js/util.js"></script>
+	<script src="/landingpage/assets/js/main.js"></script>
+	<script type="module" src="../../camera-kit.js"></script>
+	<script>$('#sidebar').load('/landingpage/sidebar.html')</script>
 
 </body>
 

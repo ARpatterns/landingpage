@@ -5,7 +5,7 @@
 	<title>Segment Overlay Pattern - AR Patterns</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/landingpage/assets/css/main.css" />
 </head>
 
 <body class="is-preload">
@@ -25,7 +25,7 @@
 						</sub>
 						<h1>Segment Overlay Pattern</h1>
 					</header>
-					<span class="image center"><img src="images/2.0 Segment Overlay@2x.png" alt="" /></span>
+					<span class="image center"><img src="/landingpage/augmentation-patterns/segment-overlay-pattern/images/2.0 Segment Overlay@2x.png" alt="" /></span>
 
 					<h2>What is the Segment Overlay Pattern?</h2>
 					<p>
@@ -35,11 +35,11 @@
 						detected text in a dictionary app able to recognize text in the real world. The Segment Overlay
 						pattern is best understood when highlighting its differences with seemingly similar patterns,
 						such as the Area Enrichment and the Superimposition patterns. The <a
-							href="/augmentation-patterns/area-enrichment-pattern/area-enrichment-pattern.html">Area
+							href="/landingpage/augmentation-patterns/area-enrichment-pattern/area-enrichment-pattern.html">Area
 							Enrichment</a> pattern has
 						the intention of replacing large areas in the camera image with a 3D-Augmentation to add
 						spaciality, while the <a
-							href="/augmentation-patterns/superimposition-pattern/superimposition-pattern.html">Superimposition</a>
+							href="/landingpage/augmentation-patterns/superimposition-pattern/superimposition-pattern.html">Superimposition</a>
 						pattern is usually used with the intention of placing a
 						virtual 3D-Object above a real world object while understanding and matching its orientation. By
 						contrast, the segment overlay pattern often does not try to understand orientation of the
@@ -68,9 +68,9 @@
 					</ul>
 				<h2>Related Patterns</h2>
 				<ul>
-					<li><a href="/augmentation-patterns/area-enrichment-pattern/area-enrichment-pattern.html">Area Enrichment:</a> The Area Enrichment has the intention of replacing large areas in the camera image with a 3D-Augmentation to add spaciality, for example the background, the sky, or all green pixels, and fills them with an augmentation.</li>
-					<li><a href="/augmentation-patterns/superimposition-pattern/superimposition-pattern.html">Superimposition:</a> The superimposition is usually used with the intention of placing a virtual 3D-Object above a real world object while understanding and matching its orientation. By contrast, the segment overlay pattern does not have the intention of placing virtual objects, but to alter or augment potentially fine grained areas in a procedural way.</li>
-					<li><a href="/augmentation-patterns/captured-twin-pattern/captured-twin-pattern.html">Captured Twin:</a> The captured twin pattern aims to create a virtual replica of a real object. While capturing the real-world object, the Segment Overlay pattern might be used to help guide users in the scanning step, later transitioning to the Captured Twin pattern.</li>
+					<li><a href="/landingpage/augmentation-patterns/area-enrichment-pattern/area-enrichment-pattern.html">Area Enrichment:</a> The Area Enrichment has the intention of replacing large areas in the camera image with a 3D-Augmentation to add spaciality, for example the background, the sky, or all green pixels, and fills them with an augmentation.</li>
+					<li><a href="/landingpage/augmentation-patterns/superimposition-pattern/superimposition-pattern.html">Superimposition:</a> The superimposition is usually used with the intention of placing a virtual 3D-Object above a real world object while understanding and matching its orientation. By contrast, the segment overlay pattern does not have the intention of placing virtual objects, but to alter or augment potentially fine grained areas in a procedural way.</li>
+					<li><a href="/landingpage/augmentation-patterns/captured-twin-pattern/captured-twin-pattern.html">Captured Twin:</a> The captured twin pattern aims to create a virtual replica of a real object. While capturing the real-world object, the Segment Overlay pattern might be used to help guide users in the scanning step, later transitioning to the Captured Twin pattern.</li>
 				</ul>
 				<h2>Technical Considerations</h2>
 				<p>
@@ -89,6 +89,32 @@
 						Self-Driving or Driver Assistance: Self-driving heavily relies on recognizing the environment. The result can be used to display in-car AI like highlighting potential dangers, direction signs, speed limits, etc.
 					</li>
 				</ul>
+
+				<button id="try_it_out" onclick="startLens('segment_overlay')">Try it out</button>
+				<!-- <div>
+					<p id="no-camera-connected-error-message"></p>
+					<span class="canvas center"><canvas id="canvas"></canvas></span>
+					<p class="text-with-icon" id="snap_attribution">
+						Powered by
+						<img src="/landingpage/images/snap_logo.svg" alt="" />
+					</p>
+				</div> -->
+
+				<div class="camera-kit-container">
+					<p id="no-camera-connected-error-message"></p>
+					
+					<span class="canvas center">
+					  <canvas id="canvas"></canvas>
+					</span>
+					
+					<p class="text-with-icon" id="snap_attribution">
+						Powered by
+						<a href="https://ar.snap.com/camera-kit">
+						  <img src="/landingpage/images/snap_logo.svg" alt="Snap Logo"/>
+						</a>
+					</p>					  
+				</div>				  
+
 				</section>
 
 			</div>
@@ -100,12 +126,13 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="/assets/js/jquery.min.js"></script>
-	<script src="/assets/js/browser.min.js"></script>
-	<script src="/assets/js/breakpoints.min.js"></script>
-	<script src="/assets/js/util.js"></script>
-	<script src="/assets/js/main.js"></script>
-	<script>$('#sidebar').load('/sidebar.html')</script>
+	<script src="/landingpage/assets/js/jquery.min.js"></script>
+	<script src="/landingpage/assets/js/browser.min.js"></script>
+	<script src="/landingpage/assets/js/breakpoints.min.js"></script>
+	<script src="/landingpage/assets/js/util.js"></script>
+	<script src="/landingpage/assets/js/main.js"></script>
+	<script type="module" src="../../camera-kit.js"></script>
+	<script>$('#sidebar').load('/landingpage/sidebar.html')</script>
 </body>
 
 </html>

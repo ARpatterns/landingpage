@@ -1653,6 +1653,54 @@ input[type=radio] + label:before {
   font-family: "Font Awesome 5 Brands";
 }
 
+
+.camera-kit-container {
+  text-align: center;
+}
+
+/* Canvas */
+.canvas {
+  border-radius: 0.375em;
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
+.canvas canvas {
+  border-radius: 0.375em;
+  display: block;
+}
+.canvas.center {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  width: 100%;
+}
+
+.text-with-icon {
+  display: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.text-with-icon a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.text-with-icon img {
+  height: 1.75em;
+}
+
+@media screen and (min-width: 737px) {
+  .canvas.center {
+    max-width: 60%;
+  }
+}
+.canvas.center canvas {
+  width: 100%;
+}
+
 /* Image */
 .image {
   border-radius: 0.375em;
