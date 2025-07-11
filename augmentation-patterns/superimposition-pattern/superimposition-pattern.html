@@ -25,7 +25,7 @@
 						</sub>
 						<h1>Superimposition Pattern</h1>
 					</header>
-					<span class="image center"><img src="images/6.0 Superimposition@2x.png" alt="" /></span>
+					<span class="image center"><img src="/augmentation-patterns/superimposition-pattern/images/6.0 Superimposition@2x.png" alt="" /></span>
 					<h2>What is the Superimposition Pattern?</h2>
 					<p>
 						Superimposition aims to cover a detected entity with a virtual one. For example, in an augmented
@@ -106,6 +106,20 @@
 						<li>Shopping apps may use this pattern for virtual-try on scenarios, where users may wish to see
 							if a piece of clothing fits them before buying.</li>
 					</ul>
+
+					<button id="try_it_out" onclick="startLens('superimposition')">Try it out</button>
+					<div class="camera-kit-container">
+						<p id="no-camera-connected-error-message"></p>
+						<span class="canvas center"><canvas id="canvas"></canvas></span>
+					
+						<p class="text-with-icon" id="snap_attribution">
+							Powered by
+							<a href="https://ar.snap.com/camera-kit">
+							  <img src="/images/snap_logo.svg" alt="Snap Logo"/>
+							</a>
+						</p>	
+					</div>
+
 				</section>
 
 			</div>
@@ -122,6 +136,7 @@
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/main.js"></script>
+	<script type="module" src="../../camera-kit.js"></script>
 	<script>$('#sidebar').load('/sidebar.html')</script>
 
 </body>

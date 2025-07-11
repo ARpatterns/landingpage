@@ -25,7 +25,7 @@
 						</sub>
 						<h1>Segment Overlay Pattern</h1>
 					</header>
-					<span class="image center"><img src="images/2.0 Segment Overlay@2x.png" alt="" /></span>
+					<span class="image center"><img src="/augmentation-patterns/segment-overlay-pattern/images/2.0 Segment Overlay@2x.png" alt="" /></span>
 
 					<h2>What is the Segment Overlay Pattern?</h2>
 					<p>
@@ -89,6 +89,32 @@
 						Self-Driving or Driver Assistance: Self-driving heavily relies on recognizing the environment. The result can be used to display in-car AI like highlighting potential dangers, direction signs, speed limits, etc.
 					</li>
 				</ul>
+
+				<button id="try_it_out" onclick="startLens('segment_overlay')">Try it out</button>
+				<!-- <div>
+					<p id="no-camera-connected-error-message"></p>
+					<span class="canvas center"><canvas id="canvas"></canvas></span>
+					<p class="text-with-icon" id="snap_attribution">
+						Powered by
+						<img src="/images/snap_logo.svg" alt="" />
+					</p>
+				</div> -->
+
+				<div class="camera-kit-container">
+					<p id="no-camera-connected-error-message"></p>
+					
+					<span class="canvas center">
+					  <canvas id="canvas"></canvas>
+					</span>
+					
+					<p class="text-with-icon" id="snap_attribution">
+						Powered by
+						<a href="https://ar.snap.com/camera-kit">
+						  <img src="/images/snap_logo.svg" alt="Snap Logo"/>
+						</a>
+					</p>					  
+				</div>				  
+
 				</section>
 
 			</div>
@@ -105,6 +131,7 @@
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/main.js"></script>
+	<script type="module" src="../../camera-kit.js"></script>
 	<script>$('#sidebar').load('/sidebar.html')</script>
 </body>
 
